@@ -28,7 +28,7 @@ export class TheaterController {
   // 2.getClusterTheaterBySystem: Lấy thông tin cụm rạp theo hệ thống
   @ApiQuery({name:'theater_id', required:true})
   @Get('/get-ClusterTheaterBySystem')
-  async getClusterTheaterBySystem(@Query('theater_id') theater_id,): Promise<any> {
+  async getClusterTheaterBySystem(@Query('theater_id') theater_id): Promise<any> {
     return this.theaterService.getClusterTheaterBySystem(theater_id);
   }
 

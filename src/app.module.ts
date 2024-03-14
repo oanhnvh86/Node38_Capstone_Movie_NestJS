@@ -5,9 +5,10 @@ import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
 import { TheaterModule } from './theater/theater.module';
 import { MovieModule } from './movie/movie.module';
+import { BookticketModule } from './bookticket/bookticket.module';
 
 @Module({
-  imports: [UserModule, AuthModule, TheaterModule, MovieModule],
+  imports: [UserModule, AuthModule, TheaterModule, MovieModule, BookticketModule],
   controllers: [AppController],
   providers: [AppService],
 })
