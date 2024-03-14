@@ -235,7 +235,7 @@ async createTheater (body: theaterDTO): Promise<any>{
     catch(error){
         // res.send(`BE error: ${error}`)
         return {
-            status: 200,
+            status: 500,
             message: `BE error: ${error}`
         }
     }
