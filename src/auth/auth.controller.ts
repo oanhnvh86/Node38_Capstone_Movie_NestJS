@@ -1,4 +1,13 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, Res } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  Res,
+} from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { ApiBody, ApiTags } from '@nestjs/swagger';
 import { loginDTO } from './dto/login.dto';
@@ -10,18 +19,18 @@ export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
   //1.signUp: trang đăng ký
-  @ApiBody({type: registerDTO})
+  @ApiBody({ type: registerDTO })
   @Post('/signup')
-  async signUp(@Body() body, @Res() res): Promise<any>{
+  async signUp(@Body() body, @Res() res): Promise<any> {
     // return this.authService.login(body); //C1
     let data = await this.authService.signUp(body);
     res.status(data.status).json(data);
   }
 
   //2. login: trang đăng nhập
-  @ApiBody({type: loginDTO})
+  @ApiBody({ type: loginDTO })
   @Post('/login')
-  async login(@Body() body, @Res() res): Promise<any>{
+  async login(@Body() body, @Res() res): Promise<any> {
     // return this.authService.login(body); //C1
     let data = await this.authService.login(body);
     res.status(data.status).json(data);

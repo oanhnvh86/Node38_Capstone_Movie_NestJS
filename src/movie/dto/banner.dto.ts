@@ -1,8 +1,8 @@
-import { ApiProperty } from "@nestjs/swagger"
+import { ApiProperty } from '@nestjs/swagger';
 
 export class bannerDTO {
-    @ApiProperty()
-    movie_id:number
-    @ApiProperty()
-    image: string
+  @ApiProperty()
+  movie_id: number;
+  @ApiProperty()
+  image: string;
 }

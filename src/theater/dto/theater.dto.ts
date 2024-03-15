@@ -1,8 +1,8 @@
-import { ApiProperty } from "@nestjs/swagger"
+import { ApiProperty } from '@nestjs/swagger';
 
 export class theaterDTO {
-    @ApiProperty()
-    theater_name: string
-    @ApiProperty()
-    logo: string
+  @ApiProperty()
+  theater_name: string;
+  @ApiProperty()
+  logo: string;
 }

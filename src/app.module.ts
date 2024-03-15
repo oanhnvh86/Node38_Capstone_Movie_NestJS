@@ -8,7 +8,7 @@ import { MovieModule } from './movie/movie.module';
 import { BookticketModule } from './bookticket/bookticket.module';
 
 @Module({
-  imports: [UserModule, AuthModule, TheaterModule, MovieModule, BookticketModule],
+  imports: [AuthModule, UserModule, TheaterModule, MovieModule, BookticketModule],
   controllers: [AppController],
   providers: [AppService],
 })
